@@ -5,24 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11302a9e-bb5d-4c69-a815-a479aa677148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Day.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day1/Day1.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/TestDay1.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day2/Day2.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/day2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/day2/TestDay2.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day1/Day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day1/Day1.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +22,16 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -60,7 +59,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Gradle.advent2023 [run --args &quot;1&quot;]">
+  <component name="RunManager" selected="Gradle.advent2023 [run --args &quot;2&quot;]">
     <configuration name="TestDay1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -84,7 +83,30 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="advent2023 [run --args &quot;1&quot;]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+    <configuration name="TestDay2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.jacobhyphenated.advent2023.day2.TestDay2&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="advent2023 [run --args &quot;2&quot;]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -97,7 +119,7 @@
           <list>
             <option value="run" />
             <option value="--args" />
-            <option value="&quot;1&quot;" />
+            <option value="&quot;2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -108,11 +130,13 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.advent2023 [run --args &quot;1&quot;]" />
+      <item itemvalue="Gradle.advent2023 [run --args &quot;2&quot;]" />
       <item itemvalue="Gradle.TestDay1" />
+      <item itemvalue="Gradle.TestDay2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.TestDay2" />
         <item itemvalue="Gradle.TestDay1" />
       </list>
     </recent_temporary>
