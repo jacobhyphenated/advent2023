@@ -60,8 +60,8 @@ class Day2: Day<List<String>> {
     return maxColorMap
   }
 
-  override fun warmup(input: List<String>): Any {
-    return maxColorsFromLine(input[0])
+  override fun warmup(input: List<String>) {
+    maxColorsFromLine(input[0])
   }
 
 }

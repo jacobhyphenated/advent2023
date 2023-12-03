@@ -103,8 +103,8 @@ class Day1: Day<List<String>> {
 //    }
 //  }
 
-  override fun warmup(input: List<String>): Any {
+  override fun warmup(input: List<String>) {
     part1(input)
-    return part2(input)
+    part2(input)
   }
 }

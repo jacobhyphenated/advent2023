@@ -26,8 +26,7 @@ interface Day<T> {
    *
    * Any code executed in this method will not be timed during part 1 or part 2
    */
-  fun warmup(input: T): Any {
+  fun warmup(input: T) {
     //No-op
-    return 0
   }
 }

@@ -1,5 +1,4 @@
-package com.jacobhyphenated.advent2023
-import com.jacobhyphenated.advent2023.day1.Day1
+package com.jacobhyphenated.advent2023.day1
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
