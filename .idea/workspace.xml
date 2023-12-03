@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11302a9e-bb5d-4c69-a815-a479aa677148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day3/Day3.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/day3/TestDay3.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Extensions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Day.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Day.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day1/Day1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day1/Day1.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day2/Day2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day2/Day2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/TestDay1.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/day1/TestDay1.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day3/Day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day3/Day3.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +61,7 @@
       <recent name="com.jacobhyphenated.advent2023.day1" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.advent2023 [run --args &quot;3&quot;]">
+  <component name="RunManager" selected="Gradle.TestDay2">
     <configuration name="TestDay1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,8 +162,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.TestDay3" />
         <item itemvalue="Gradle.TestDay2" />
+        <item itemvalue="Gradle.TestDay3" />
         <item itemvalue="Gradle.TestDay1" />
       </list>
     </recent_temporary>

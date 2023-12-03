@@ -1,6 +1,7 @@
 package com.jacobhyphenated.advent2023.day2
 
 import com.jacobhyphenated.advent2023.Day
+import com.jacobhyphenated.advent2023.product
 
 /**
  * Day 2: Cube Conundrum
@@ -35,7 +36,7 @@ class Day2: Day<List<String>> {
    */
   override fun part2(input: List<String>): Int {
     return input.sumOf { line ->
-      maxColorsFromLine(line).values.reduce { acc, count ->  acc * count }
+      maxColorsFromLine(line).values.product()
     }
   }
 
@@ -74,9 +75,9 @@ enum class Color {
   companion object {
     fun fromString(input: String): Color {
       return when(input) {
-        "blue" -> Color.BLUE
-        "red" -> Color.RED
-        "green" -> Color.GREEN
+        "blue" -> BLUE
+        "red" -> RED
+        "green" -> GREEN
         else -> throw IllegalArgumentException("Invalid color: $input")
       }
     }

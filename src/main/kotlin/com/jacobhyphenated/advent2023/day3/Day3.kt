@@ -1,6 +1,7 @@
 package com.jacobhyphenated.advent2023.day3
 
 import com.jacobhyphenated.advent2023.Day
+import com.jacobhyphenated.advent2023.product
 
 /**
  * Day 3: Gear Ratios
@@ -69,7 +70,7 @@ class Day3: Day<List<List<Char>>> {
           findGearNumbers(input, row, col)?.let { positions ->
             gearRatio += positions
               .map { (r,c) -> fullNumberAtPosition(input, r, c) }
-              .reduce { acc, next -> acc * next }
+              .product()
           }
         }
       }
