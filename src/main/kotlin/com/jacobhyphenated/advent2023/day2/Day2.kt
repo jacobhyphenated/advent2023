@@ -83,3 +83,7 @@ enum class Color {
     }
   }
 }
+
+fun main(@Suppress("UNUSED_PARAMETER") args: Array<String>) {
+  Day2().run()
+}

@@ -149,3 +149,7 @@ class Day3: Day<List<List<Char>>> {
     part2(input)
   }
 }
+
+fun main(@Suppress("UNUSED_PARAMETER") args: Array<String>) {
+  Day3().run()
+}
