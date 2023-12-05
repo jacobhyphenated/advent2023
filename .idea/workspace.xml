@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11302a9e-bb5d-4c69-a815-a479aa677148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day4/Day4.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/day4/TestDay4.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day5/Day5.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/day5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/day5/TestDay5.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Extensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Extensions.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day2/Day2.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day2/Day2.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day3/Day3.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day3/Day3.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day4/Day4.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day4/Day4.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,30 +63,7 @@
       <recent name="com.jacobhyphenated.advent2023.day1" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.advent2023 [run --args &quot;4&quot;]">
-    <configuration name="TestDay1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.jacobhyphenated.advent2023.TestDay1&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Kotlin.Day5Kt">
     <configuration name="TestDay2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -103,29 +78,6 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;com.jacobhyphenated.advent2023.day2.TestDay2&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
-    <configuration name="TestDay3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;com.jacobhyphenated.advent2023.day3.TestDay3&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -158,7 +110,30 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="advent2023 [run --args &quot;4&quot;]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
+    <configuration name="TestDay5" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.jacobhyphenated.advent2023.day5.TestDay5&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="advent2023 [run --args &quot;5&quot;]" type="GradleRunConfiguration" factoryName="Gradle" nameIsGenerated="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -171,7 +146,7 @@
           <list>
             <option value="run" />
             <option value="--args" />
-            <option value="&quot;4&quot;" />
+            <option value="&quot;5&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -188,21 +163,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day5Kt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jacobhyphenated.advent2023.day5.Day5Kt" />
+      <module name="advent2023.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Gradle.advent2023 [run --args &quot;4&quot;]" />
+      <item itemvalue="Gradle.advent2023 [run --args &quot;5&quot;]" />
+      <item itemvalue="Gradle.TestDay5" />
       <item itemvalue="Gradle.TestDay4" />
-      <item itemvalue="Gradle.TestDay3" />
-      <item itemvalue="Gradle.TestDay1" />
       <item itemvalue="Gradle.TestDay2" />
+      <item itemvalue="Kotlin.Day5Kt" />
       <item itemvalue="Kotlin.Day3Kt" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Kotlin.Day5Kt" />
+        <item itemvalue="Gradle.TestDay5" />
         <item itemvalue="Gradle.TestDay4" />
         <item itemvalue="Kotlin.Day3Kt" />
         <item itemvalue="Gradle.TestDay2" />
-        <item itemvalue="Gradle.TestDay3" />
-        <item itemvalue="Gradle.TestDay1" />
       </list>
     </recent_temporary>
   </component>

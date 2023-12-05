@@ -67,3 +67,7 @@ data class ScratchCard(val winningNumbers: Set<Int>, val yourNumbers: Set<Int>) 
     return winningNumbers.intersect(yourNumbers).size
   }
 }
+
+fun main(@Suppress("UNUSED_PARAMETER") args: Array<String>) {
+  Day4().run()
+}
