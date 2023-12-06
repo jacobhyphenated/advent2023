@@ -6,5 +6,9 @@ fun Collection<Int>.product(): Int {
   return reduce { acc, next -> acc * next }
 }
 
+fun Collection<Long>.product(): Long {
+  return reduce { acc, next -> acc * next }
+}
+
 @Suppress("DANGEROUS_CHARACTERS")
 infix fun Int.`**`(exponent: Int): Int = toDouble().pow(exponent).toInt()

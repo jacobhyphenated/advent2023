@@ -43,7 +43,7 @@ class Day5: Day<Pair<List<Long>, List<SourceDestinationMap>>> {
     val sourcePairs = seedsRangeList.windowed(2, 2).map { (seed, range) -> Pair(seed, range) }
     return almanac.fold(sourcePairs) { pairs, destinationMap ->
       pairs.flatMap { (source, range) -> destinationMap.getRanges(source, range) }
-    }.minOf { (s, _) -> s }
+    }.minOf { (location, _) -> location }
   }
 
   fun parseInput(input: String): Pair<List<Long>, List<SourceDestinationMap>> {
@@ -64,7 +64,7 @@ class Day5: Day<Pair<List<Long>, List<SourceDestinationMap>>> {
  * Data helper class that does the source destination conversions.
  * The source and destination names are not actually used because the puzzle is in order
  *
- * each range map represents tuple of length throuple of (destination, source, range) from the puzzle input
+ * each range map represents a throuple of (destination, source, range) from the puzzle input
  * a source-to-destination map can have any number or range maps
  */
 data class SourceDestinationMap(val sourceName: String,
@@ -95,7 +95,7 @@ data class SourceDestinationMap(val sourceName: String,
    *     |***********\........|  \                    e1 < e2 && e1 > s2     s1 < s2
    *     |***********\...........\**|                 e2 < e1 && e2 > s1     s1 < s2
    *     \           |...........\**|                 e2 < e1 && e2 < s1
-   *     \           |...........|  \
+   *     \           |...........|  \                 e1 < e2 && e1 > s2
    *     s2          s1         e1  e2
    * ```
    *
