@@ -24,7 +24,7 @@ java -jar ./build/libs/advent2023-0.1.0.jar 1 2
 # License
 BSD-3 Clause License
 
-Copyright 2022 Jacob Kanipe-Illig
+Copyright 2023 Jacob Kanipe-Illig
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
