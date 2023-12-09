@@ -41,61 +41,19 @@ class Day8: Day<Pair<String, Direction>> {
     val (instructionString, directions) = input
     val currentPositions = directions.keys.filter { it.endsWith("A") }.toMutableList()
 
-    // We need to look for where the pattern repeats.
-    val lengthOffsets = currentPositions.map { start ->
-      val instructionGenerator = InfiniteGenerator(instructionString.toCharArray().toList())
-      val patternStart = mutableMapOf<String, Int>()
-      var current = start
-      do {
-        patternStart[current] = instructionGenerator.num
-        // the repetition must be a multiple of the instruction length
-        // run through all instructions and find where the starting position has been seen before
-        repeat(instructionString.length) {
-          current = nextPosition(instructionGenerator, current, directions)
-        }
-      } while (current !in patternStart)
-      // The pattern length is how many instructions happen before the pattern repeats itself
-      val patterLength = instructionGenerator.num - patternStart.getValue(current)
-      // the offset is some number of instructions from the beginning that are not included in the pattern
-      val patternOffset = patternStart.getValue(current)
-      Pair(patterLength.toLong(), patternOffset.toLong())
-    }
-    // I think in this puzzle input, the pattern offsets are all the same, so this might not be necessary
-    val offset = lcm(lengthOffsets.map { it.second })
-
-    // find the indexes in each pattern that are end destinations
-    val endIndexes = currentPositions.mapIndexed { index, start ->
+    // find how long it takes to reach the end from each starting position
+    val endIndexes = currentPositions.map { start ->
       var current = start
       val instructionGenerator = InfiniteGenerator(instructionString.toCharArray().toList())
-      (0 until offset).forEach { _ ->
+      while (!current.endsWith("Z")){
         current = nextPosition(instructionGenerator, current, directions)
       }
-      val patternLength = lengthOffsets[index].first
-      val endIndex = mutableListOf<Long>()
-      repeat(patternLength.toInt()) {
-        if (current.endsWith("Z")) {
-          endIndex.add(it.toLong())
-        }
-        current = nextPosition(instructionGenerator, current, directions)
-      }
-      endIndex.last()
+      instructionGenerator.num.toLong()
     }
 
-    // we know the end index and the length of each pattern. Now we find where they line up.
-    // compare 2 patterns at a time, and build on top of them.
-    return endIndexes.mapIndexed { i, endIndex ->
-      val patternLength = lengthOffsets[i].first
-      Pair(endIndex, patternLength)
-    }.reduce { (end1, length1), (end2, length2) ->
-      var patternEnd = end1
-      // note: as we reduce, length1 will be much larger than length2
-      while (patternEnd % length2 != end2 ) {
-        patternEnd += length1
-      }
-      // the new end index is the first intersection of the two end points
-      // the new length is the LCM of the two lengths
-      Pair(patternEnd, lcm(listOf(length1, length2)))
-    }.first + offset
+    // Note: This only works because for this puzzle, the repeating pattern of the instructions
+    // starts at the same time for each starting location. That does not necessarily have to be true
+    return lcm(endIndexes)
   }
 
   fun parseInput(input: String): Pair<String, Direction> {
