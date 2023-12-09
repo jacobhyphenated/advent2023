@@ -7,6 +7,7 @@ import com.jacobhyphenated.advent2023.day4.Day4
 import com.jacobhyphenated.advent2023.day5.Day5
 import com.jacobhyphenated.advent2023.day6.Day6
 import com.jacobhyphenated.advent2023.day7.Day7
+import com.jacobhyphenated.advent2023.day8.Day8
 
 fun main(args: Array<String>) {
   val days = mapOf(
@@ -16,7 +17,8 @@ fun main(args: Array<String>) {
     "4" to Day4(),
     "5" to Day5(),
     "6" to Day6(),
-    "7" to Day7()
+    "7" to Day7(),
+    "8" to Day8()
   )
 
   args.forEach { day ->

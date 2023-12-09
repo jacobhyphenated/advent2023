@@ -48,6 +48,10 @@ class Day7: Day<List<Pair<Hand, Int>>> {
       Pair(Hand(cards), bet.toInt())
     }
   }
+
+  override fun warmup(input: List<Pair<Hand, Int>>) {
+    part1(input)
+  }
 }
 
 /**
@@ -59,6 +63,8 @@ class Day7: Day<List<Pair<Hand, Int>>> {
 class Hand(private var cards: List<Card>): Comparable<Hand> {
 
   private var modifiedCards = cards
+  // remember hand rank to avoid repeat calculations
+  private var rank: HandRank? = null
 
   /**
    * Remap [cards] so Jacks become Jokers (Jokers have a lower value than Jacks)
@@ -75,10 +81,11 @@ class Hand(private var cards: List<Card>): Comparable<Hand> {
     }
     val max = counts.maxBy { (card, count) -> if (card == Card.JOKER) { 0 } else { count } }.key
     modifiedCards = cards.map { if (it == Card.JOKER) { max } else { it } }
+    rank = null
   }
 
   /**
-   * Sort. Enums are sorted by ordinal, so the order they appear in the enum
+   * Sort. Enums are sorted by ordinal - the order they appear in the enum
    * Sort based on rank first, then compare the value of the first card in each hand.
    * Then the second, and so forth
    */
@@ -100,6 +107,9 @@ class Hand(private var cards: List<Card>): Comparable<Hand> {
    * Calculate the [HandRank] of the hand. This can be derived by counting haw many times a card repeats.
    */
   private fun getRank(): HandRank {
+    if (rank != null) {
+      return rank!!
+    }
     // Create a Map of Card -> Number of times that card appears in this hand
     val counts = modifiedCards.groupingBy { it }.eachCount()
     return when (counts.size) {
@@ -109,7 +119,7 @@ class Hand(private var cards: List<Card>): Comparable<Hand> {
       4 -> HandRank.ONE_PAIR
       5 -> HandRank.HIGH_CARD
       else -> throw IllegalStateException("A hand must have exactly 5 cards")
-    }
+    }.also { rank = it }
   }
 
 }
@@ -138,4 +148,8 @@ enum class Card {
       return cardMap[c] ?: throw IllegalArgumentException("Invalid Character: $c")
     }
   }
+}
+
+fun main(@Suppress("UNUSED_PARAMETER") args: Array<String>) {
+  Day7().run()
 }
