@@ -1,6 +1,7 @@
 package com.jacobhyphenated.advent2023
 
 import com.jacobhyphenated.advent2023.day1.Day1
+import com.jacobhyphenated.advent2023.day10.Day10
 import com.jacobhyphenated.advent2023.day2.Day2
 import com.jacobhyphenated.advent2023.day3.Day3
 import com.jacobhyphenated.advent2023.day4.Day4
@@ -20,7 +21,8 @@ fun main(args: Array<String>) {
     "6" to Day6(),
     "7" to Day7(),
     "8" to Day8(),
-    "9" to Day9()
+    "9" to Day9(),
+    "10" to Day10()
   )
 
   args.forEach { day ->

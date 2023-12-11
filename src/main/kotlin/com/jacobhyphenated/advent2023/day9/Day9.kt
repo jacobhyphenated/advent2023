@@ -31,7 +31,7 @@ class Day9: Day<List<List<Int>>> {
    *
    * Giving the value of 28. Add this value for each line of the puzzle input
    */
-  override fun part1(input: List<List<Int>>): Any {
+  override fun part1(input: List<List<Int>>): Int {
     return input.sumOf { measure ->
       val differences = mutableListOf(measure)
       var currentDiff = measure
@@ -53,7 +53,7 @@ class Day9: Day<List<List<Int>>> {
    *       2   2   2   2
    *        0   0   0
    */
-  override fun part2(input: List<List<Int>>): Any {
+  override fun part2(input: List<List<Int>>): Int {
     return input.sumOf { measure ->
       val differences = mutableListOf(measure)
       var currentDiff = measure
