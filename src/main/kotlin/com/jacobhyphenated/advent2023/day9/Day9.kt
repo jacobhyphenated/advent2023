@@ -45,13 +45,13 @@ class Day9: Day<List<List<Int>>> {
 
   /**
    * Part 2: Now extrapolate the first value.
-   * Instead of adding the last values fill in a 0 at the beginning of the final difference list,
+   * Instead of adding the last values, fill in a 0 at the beginning of the final difference list,
    * and calculate the value in the previous list necessary to result in the below value:
    * 5  10  13  16  21  30  45
    *   5   3   3   5   9  15
    *    -2   0   2   4   6
    *       2   2   2   2
-   *        0   0   0
+   *         0   0   0
    */
   override fun part2(input: List<List<Int>>): Int {
     return input.sumOf { measure ->

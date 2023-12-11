@@ -30,7 +30,7 @@ class Day10: Day<List<List<Char>>> {
   }
 
   /**
-   * Part 2: Count haw many spaces are enclosed within the loop
+   * Part 2: Count how many spaces are enclosed within the loop
    *
    * Note: You can move between sections of pipe that do not connect
    * example:
@@ -205,6 +205,10 @@ class Day10: Day<List<List<Char>>> {
       .filter { it !in pipeLoop && it !in path }
       .any { (r,c) -> canAccessOutsideOfGrid(r, c, grid, pipeLoop, memoOpen, path) }
   }
+
+  override fun warmup(input: List<List<Char>>) {
+    part2(input)
+  }
 }
 
 enum class Direction {
@@ -233,3 +237,7 @@ enum class Direction {
 }
 
 data class PathCost(val location: Pair<Int,Int>, val cost: Int)
+
+fun main(@Suppress("UNUSED_PARAMETER") args: Array<String>) {
+  Day10().run()
+}
