@@ -14,6 +14,7 @@ class Day12: Day<List<Pair<List<Char>, List<Int>>>> {
   override fun part2(input: List<Pair<List<Char>, List<Int>>>): Any {
     TODO("Not yet implemented")
     // expand input
+
     // split on \.+
 
     // if the number of split groups == groupSize.size
@@ -28,6 +29,11 @@ class Day12: Day<List<Pair<List<Char>, List<Int>>>> {
     // if number of splitGroups > groupSize.size
     //     find all groups with only ?
     //     try every option where we remove one of the ? groups, sum the results
+
+
+    // fun isReadyForCombos(groups: List<String>, sizes: List<Int>)
+    //    groups.size == sizes.size &&
+    //    indices.all { groups[i].length >= sizes[i]
   }
 
   private fun countValidArrangements(arrangement: List<Char>, groupSizes: List<Int>): Int {

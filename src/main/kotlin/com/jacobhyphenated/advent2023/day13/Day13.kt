@@ -58,8 +58,6 @@ class Day13: Day<List<List<List<Char>>>> {
         }
       }
     }
-    println("NO SMUDGE")
-    println(rocks.joinToString("\n"){ it.joinToString("") })
     return 0
   }
 
