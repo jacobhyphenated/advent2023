@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="11302a9e-bb5d-4c69-a815-a479aa677148" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day14/Day14.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/com/jacobhyphenated/advent2023/day14/TestDay14.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day12/Day12.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day12/Day12.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day13/Day13.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day13/Day13.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day14/Day14.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/jacobhyphenated/advent2023/day14/Day14.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

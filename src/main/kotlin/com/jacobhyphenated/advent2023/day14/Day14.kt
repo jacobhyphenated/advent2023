@@ -32,29 +32,27 @@ class Day14: Day<List<List<Char>>> {
    * Do 1 billion (1_000_000_000) cycles. What is the weight on the north pillar?
    */
   override fun part2(input: List<List<Char>>): Int {
-    var lastRockFormation = input
+    var rocks = input
     val previousRocks = mutableMapOf(input to -1)
 
     val cycle = listOf(this::moveRocksNorth, this::moveRocksWest, this::moveRocksSouth, this::moveRocksEast)
     var i = 0
     var foundPattern = false
     while( i < 1_000_000_000) {
-      val rocks =  cycle.fold(lastRockFormation){ r, tilt -> tilt(r) }
+      rocks = cycle.fold(rocks){ r, tilt -> tilt(r) }
       if (!foundPattern && rocks in previousRocks) {
         foundPattern = true
         val patternDiff = i - previousRocks.getValue(rocks)
         val patternAdjust = (1_000_000_000 - i ) % patternDiff
         i = 1_000_000_000 - patternAdjust + 1
-        lastRockFormation = rocks
         continue
       }
-      lastRockFormation = rocks
       previousRocks[rocks] = i
       i++
     }
 
-    return lastRockFormation.flatMapIndexed{ index, row ->
-      row.map { c -> if (c == 'O') { lastRockFormation.size - index } else { 0 } }
+    return rocks.flatMapIndexed{ index, row ->
+      row.map { c -> if (c == 'O') { rocks.size - index } else { 0 } }
     }.sum()
   }
 
