@@ -32,4 +32,13 @@ class TestDay12 {
     assertEquals(16, day.part2(day.parseInput("????.#...#... 4,1,1")))
     assertEquals(506250, day.part2(day.parseInput("?###???????? 3,2,1")))
   }
+
+  @Test
+  fun testAllCombos() {
+    val day = Day12()
+    val list = listOf(1,5,7,9)
+    assertEquals(4, day.allCombinations(listOf(), list, 3).also { println(it) }.size)
+    assertEquals(6, day.allCombinations(listOf(), list, 2).also { println(it) }.size)
+    assertEquals(4, day.allCombinations(listOf(), list, 1).also { println(it) }.size)
+  }
 }

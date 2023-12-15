@@ -1,6 +1,7 @@
 package com.jacobhyphenated.advent2023.day12
 
 import com.jacobhyphenated.advent2023.Day
+import com.jacobhyphenated.advent2023.product
 
 class Day12: Day<List<Pair<List<Char>, List<Int>>>> {
   override fun getInput(): List<Pair<List<Char>, List<Int>>> {
@@ -11,29 +12,33 @@ class Day12: Day<List<Pair<List<Char>, List<Int>>>> {
     return input.sumOf { (arrangement, groupSize) -> countValidArrangements(arrangement, groupSize) }
   }
 
-  override fun part2(input: List<Pair<List<Char>, List<Int>>>): Any {
-    TODO("Not yet implemented")
+  override fun part2(input: List<Pair<List<Char>, List<Int>>>): Long {
     // expand input
+    return input.sumOf { (arrangement, groupSize) ->
+      val expandedArrangement = List(5) { arrangement.joinToString("") }.joinToString("?")
+      val expandedSizes = List(5) { groupSize }.flatten()
 
-    // split on \.+
+      // this solves the test input relatively fast, but it's not good enough for the puzzle input
+      countValidArrangements(expandedArrangement.toCharArray().toList(), expandedSizes).toLong().also { println(it) }
 
-    // if the number of split groups == groupSize.size
-    //    find combos for splitGroup[i], groupSize[i]
-    //    multiply all together
+    }
 
-    // if number of splitGroups < groupsSize.size
-    //     find all combinations where replacing a '?' with '.' creates the correct group size
-    //     each group[i] must have size >= groupSizes[i]
-    //     repeat steps above for each valid group size and sum together
+    // go through characters in arrangement one at a time
+    // track contiguous possible
+    // track contiguous working
+    // firstPivot = first non # char where continuousPossible >= groupSize[0]
+    // lastPivot
+    //    max is arrangement.size - groupSize[1:].sum() - 1
+    //    first . character where contiguousWorking > 0
 
-    // if number of splitGroups > groupSize.size
-    //     find all groups with only ?
-    //     try every option where we remove one of the ? groups, sum the results
+    // if firstPivot == null || lastPivot == null, return 0
+    // loop firstPivot .. lastPivot
+    //    if arrangment[it] == '#' continue
+    //    calc(arrangement[0:it], groupSize[0]) * recurse(arrangement[it+1:], groupSize[1:])
 
+    // memo recurse function inputs
+    // can this result in duplicate combos around pivot points?
 
-    // fun isReadyForCombos(groups: List<String>, sizes: List<Int>)
-    //    groups.size == sizes.size &&
-    //    indices.all { groups[i].length >= sizes[i]
   }
 
   private fun countValidArrangements(arrangement: List<Char>, groupSizes: List<Int>): Int {
@@ -92,6 +97,20 @@ class Day12: Day<List<Pair<List<Char>, List<Int>>>> {
     return false
   }
 
+  fun allCombinations(prefix: List<Int>, rest: List<Int>, num: Int): List<List<Int>> {
+    if (prefix.size == num) {
+      return listOf(prefix)
+    }
+    val remainder = num - prefix.size
+    return (0 .. rest.size - remainder).map {
+      val combo = prefix + rest[it]
+      allCombinations(combo, rest.subList(it+1), num)
+    }.flatten()
+  }
+  private fun isReadyForCombos(groups: List<String>, sizes: List<Int>): Boolean {
+    return groups.size == sizes.size && groups.indices.all { groups[it].length >= sizes[it] }
+  }
+
   fun parseInput(input: String): List<Pair<List<Char>, List<Int>>> {
     return input.lines().map {line ->
       val (arrangementString, groupString) = line.split(" ").map { it.trim() }
@@ -100,4 +119,11 @@ class Day12: Day<List<Pair<List<Char>, List<Int>>>> {
       Pair(arrangement, groups)
     }
   }
+}
+
+fun<T> List<T>.subList(fromIndex: Int): List<T> {
+  if (fromIndex >= size) {
+    return listOf()
+  }
+  return subList(fromIndex, this.size)
 }
