@@ -85,3 +85,7 @@ class Day15: Day<String> {
   }
 }
 
+fun main(@Suppress("UNUSED_PARAMETER") args: Array<String>) {
+  Day15().run()
+}
+
