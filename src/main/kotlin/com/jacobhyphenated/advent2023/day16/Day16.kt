@@ -20,7 +20,7 @@ class Day16: Day<List<List<Char>>> {
 
   /**
    * Part 1: The beam starts in the top left corner heading east.
-   * If the beam pases through a space, then that space is energized.
+   * If the beam passes through a space, then that space is energized.
    * How many spaces does this beam energize?
    */
   override fun part1(input: List<List<Char>>): Int {
@@ -29,6 +29,10 @@ class Day16: Day<List<List<Char>>> {
     return energizedSpacesFromStartingEdge(startBeam, input)
   }
 
+  /**
+   * Part 2: The beam can enter from any edge (top down, bottom up, left to right, right to left)
+   * What is the maximum number of spaces that can become energized?
+   */
   override fun part2(input: List<List<Char>>): Any {
     val startTop = input[0].indices.map { col -> Beam(Pair(-1, col), Direction.SOUTH) }
     val startBottom = input[0].indices.map { col -> Beam(Pair(input.size, col), Direction.NORTH) }

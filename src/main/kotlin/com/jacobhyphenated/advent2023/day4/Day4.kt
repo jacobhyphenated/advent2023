@@ -1,7 +1,7 @@
 package com.jacobhyphenated.advent2023.day4
 
-import com.jacobhyphenated.advent2023.`**`
 import com.jacobhyphenated.advent2023.Day
+import com.jacobhyphenated.advent2023.pow
 
 /**
  * Day 4: Scratchcards
@@ -25,7 +25,7 @@ class Day4: Day<List<ScratchCard>> {
   override fun part1(input: List<ScratchCard>): Int {
     return input.sumOf { card ->
       val matchCount = card.matchCount()
-      if(matchCount == 0) { 0 } else { 2 `**` (matchCount - 1) }
+      if(matchCount == 0) { 0 } else { 2 pow (matchCount - 1) }
     }
   }
 

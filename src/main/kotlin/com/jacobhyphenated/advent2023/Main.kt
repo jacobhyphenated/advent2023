@@ -13,6 +13,8 @@ import com.jacobhyphenated.advent2023.day18.Day18
 import com.jacobhyphenated.advent2023.day19.Day19
 import com.jacobhyphenated.advent2023.day2.Day2
 import com.jacobhyphenated.advent2023.day20.Day20
+import com.jacobhyphenated.advent2023.day21.Day21
+import com.jacobhyphenated.advent2023.day22.Day22
 import com.jacobhyphenated.advent2023.day3.Day3
 import com.jacobhyphenated.advent2023.day4.Day4
 import com.jacobhyphenated.advent2023.day5.Day5
@@ -42,7 +44,9 @@ fun main(args: Array<String>) {
     "17" to Day17(),
     "18" to Day18(),
     "19" to Day19(),
-    "20" to Day20()
+    "20" to Day20(),
+    "21" to Day21(),
+    "22" to Day22()
   )
 
   args.forEach { day ->

@@ -121,6 +121,7 @@ class Day20: Day<String> {
       }
     }
     map["button"] = ButtonModule("button", listOf("broadcaster"))
+    // set the conjunction module inputs once we know the full list of modules
     map.values.filterIsInstance<ConjunctionModule>().forEach { conjunctionModule ->
       val inputs = map.values.filter { conjunctionModule.name in it.outputs}.map { it.name }
       conjunctionModule.setInputs(inputs)
